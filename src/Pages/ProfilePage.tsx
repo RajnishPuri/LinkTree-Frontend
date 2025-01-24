@@ -42,6 +42,8 @@ const ProfilePage = () => {
         window.open('https://github.com/RajnishPuri', '_blank');
     }
 
+    console.log(user);
+
     return (
         <div>
             <div className='w-screen h-screen flex items-center justify-center'>

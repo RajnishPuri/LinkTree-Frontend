@@ -30,6 +30,10 @@ const MobileView = () => {
         return () => clearInterval(interval);
     }, []);
 
+    function footerLinkHandler() {
+        window.open('https://github.com/RajnishPuri', '_blank');
+    }
+
     return (
         <div
             className="relative w-full max-w-[360px] aspect-[9/19.5] rounded-[40px] shadow-2xl border-[14px] border-black bg-cover bg-center"
@@ -108,7 +112,7 @@ const MobileView = () => {
             </div>
 
             <div className="absolute bottom-0 w-full text-center py-4 bg-black text-white rounded-b-2xl">
-                <p className="text-sm">Developer LeGiTCoDeR</p>
+                <p className="text-sm" onClick={footerLinkHandler}>Developer LeGiTCoDeR</p>
             </div>
         </div>
 

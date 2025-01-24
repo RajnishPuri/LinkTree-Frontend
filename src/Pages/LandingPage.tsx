@@ -11,7 +11,7 @@ const LandingPage = () => {
     const [userName, setUserName] = useState('');
     const [name, setName] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const [loading, setLoading] = useState(false); // Loading state
+    const [loading, setLoading] = useState(false);
 
     async function signinHandler(e: React.MouseEvent<HTMLButtonElement>) {
         e.preventDefault();
@@ -23,7 +23,6 @@ const LandingPage = () => {
             });
             const data = response.data;
             localStorage.setItem('token', data.token);
-            console.log(data);
             localStorage.setItem('userName', data.user.userName);
             navigate('/home');
         } catch (error) {
@@ -43,7 +42,6 @@ const LandingPage = () => {
 
         setLoading(true);
         try {
-            console.log("Sending signup request with data:", { name, email, userName, password });
             const response = await axios.post(`${backendUrl}/api/user/createUser`, {
                 name,
                 email,

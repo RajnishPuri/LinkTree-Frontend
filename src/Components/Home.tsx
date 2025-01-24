@@ -29,7 +29,6 @@ const Home = () => {
     const [isChanged, setIsChanged] = useState(false);
     const [editingItem, setEditingItem] = useState<SocialLink | null>(null);
     const [isEdited, setIsEdited] = useState(false);
-    const [deleteItem, setDeleteItem] = useState<SocialLink | null>(null);
 
 
     const handleEdit = (item: SocialLink) => {
@@ -53,7 +52,6 @@ const Home = () => {
 
     async function saveHandler() {
         try {
-            console.log('Saving links:', socialLinks);
             const token = localStorage.getItem('token');
             const response = await axios.put(
                 `${backendUrl}/api/profile/updateSocialLinks`,

@@ -18,7 +18,6 @@ interface EditFormProps {
 export const EditForm = ({ item, setIsChanged, setIsEdited }: EditFormProps) => {
     const dispatch = useDispatch();
     const user = useSelector((state: RootState) => state.user.user);
-    console.log(item);
     const [editedItem, setEditedItem] = useState<SocialLink>(item);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

@@ -70,18 +70,14 @@ const Profile = () => {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`,
                 },
             });
-
-            console.log('Profile updated successfully:', response.data);
-
             dispatch(setUser(response.data.updatedDetail));
-
             setIsEditing(false);
             alert('Profile updated successfully');
         } catch (error: any) {
             console.error('Error updating profile:', error);
             alert('Failed to update profile. Please try again later.');
         } finally {
-            setLoading(false); // End loading
+            setLoading(false);
         }
     };
 

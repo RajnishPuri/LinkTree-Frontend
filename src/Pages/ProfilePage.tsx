@@ -16,7 +16,6 @@ const ProfilePage = () => {
         const fetchUserDetails = async () => {
             try {
                 const response = await axios.get(`${backendUrl}/api/${username}`);
-                console.log(response.data.profile);
                 setUser(response.data.profile);
             } catch (err) {
                 console.error('Error fetching user details:', err);
@@ -39,7 +38,9 @@ const ProfilePage = () => {
         return <div>{error}</div>;
     }
 
-    console.log(user);
+    function footerLinkHandler() {
+        window.open('https://github.com/RajnishPuri', '_blank');
+    }
 
     return (
         <div>
@@ -98,7 +99,7 @@ const ProfilePage = () => {
                     <div>
 
                         <div className=" text-white text-center py-4 rounded-b-2xl">
-                            <p className="text-sm text-white">Developer LeGiTCoDeR</p>
+                            <p className="text-sm text-white" onClick={footerLinkHandler}>Developer LeGiTCoDeR</p>
 
                         </div>
                     </div>

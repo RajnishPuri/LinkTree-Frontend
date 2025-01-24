@@ -16,7 +16,6 @@ const HomePage = () => {
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string>('');
     const userName = localStorage.getItem('userName');
-    const user = useSelector((state: RootState) => state.user.user);
     const currentPage = useSelector((state: RootState) => state.currentPage.currentPage);
 
     useEffect(() => {

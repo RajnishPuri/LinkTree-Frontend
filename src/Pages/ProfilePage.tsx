@@ -42,7 +42,6 @@ const ProfilePage = () => {
         window.open('https://github.com/RajnishPuri', '_blank');
     }
 
-    console.log(user);
 
     return (
         <div>
@@ -62,7 +61,7 @@ const ProfilePage = () => {
                             alt="Profile"
                             className="w-24 h-24 rounded-full border-4 border-white shadow-md"
                         />
-                        <h1 className="mt-4 text-lg font-semibold text-white">{user?.name}</h1>
+                        <h1 className="mt-4 text-lg font-semibold text-white">{user?.user?.name}</h1>
                         <p className="mt-2 text-sm text-white text-center px-6 mb-2">{user?.bio}</p>
                     </div>
 
